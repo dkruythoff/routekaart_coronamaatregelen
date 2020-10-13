@@ -1,0 +1,36 @@
+---
+layout: 'layout.pug'
+---
+
+main
+  h1.title= content.title
+  ul.pointers
+    each pointer in content.pointers
+      li= pointer
+  .levels
+    each level in content.levels
+      section(class=`level level--${level.severity}`)
+        h2.level__title= level.title
+        each section in level.sections
+          section.level__sub
+            h3.level__sub__title= section.title
+            .level__sub__content
+              case section.type
+                when "text"
+                  p
+                    strong= section.heading
+                    br
+                    = section.subheading
+                  p
+                    em= section.content
+                when "headinglist"
+                  each part in section.content
+                    p
+                      strong= part.heading
+                    ul
+                      each item in part.list
+                        li= item
+                when "list"
+                  ul
+                    each item in section.content
+                      li= item
