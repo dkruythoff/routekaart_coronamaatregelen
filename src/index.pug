@@ -34,3 +34,19 @@ main
                   ul
                     each item in section.content
                       li= item
+  if content.exceptions
+    .exceptions
+      h2.exceptions__title= content.exceptions.title
+      each section in content.exceptions.sections
+        section.exceptions__section
+          h3.exceptions__section__title= section.title
+          ul.exceptions__section__list
+            each item in section.content
+              li=item
+  footer
+    p
+      | Bouw: 
+      a(href="https://twitter.cpom/dkruythoff") Darius Kruythoff
+      br
+      | Broncode:
+      a(href="https://github.com/dkruythoff/routekaart_coronamaatregelen") Github

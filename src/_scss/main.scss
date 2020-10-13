@@ -63,3 +63,50 @@ html {
     background-color: #670330;
   }
 }
+
+.exceptions {
+  border-radius: $border-radius;
+  background-color: #CDE1C1;
+  padding: 0.5em;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__title {
+    text-align: center;
+    flex: 1 0 100%;
+  }
+
+  &__section {
+    flex: 1;
+    padding: 0;
+    margin: 0;
+    & + & {
+      margin-left: 1em;
+    }
+
+    display: flex;
+    flex-flow: column;
+
+    border-radius: $border-radius;
+    border: solid 1px #9CC382;
+    background-color: #DEEBD6;
+
+    &__title {
+      flex: 0 1 auto;
+      text-align: center;
+      margin: 0;
+      padding: 0.5em;
+      border: none;
+    }
+
+    &__list {
+      flex: 1 1 auto;
+      padding: 1em 0.5em 1em 1.5em;
+      margin: 0;
+
+      border-radius: $border-radius;
+      border: solid 1px #9CC382;
+      background-color: #F6FAF4;
+    }
+  }
+}
