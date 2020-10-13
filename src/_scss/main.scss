@@ -22,7 +22,7 @@ html {
   border-radius: $border-radius;
   padding: 0.5em;
   margin-bottom: 1em;
-  flex: 1;
+  flex: 1 1 1fr;
   
   & + & {
     margin-left: 1em;
